@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int f(int a,int b);
+
+
+int main(){
+int a,b,x;
+printf("Iki sayi giriniz:");
+scanf ("%d%d",&a,&b);
+x=f(a,b) ;
+printf ("Girilen sayilarin carpimi %d",x);
+return 0 ;
+}
+int f(int a,int b){
+    static int x=0,i=0;
+    if(i<a) {
+    i++;
+    x=x+b;
+    f(a,b);
+    }
+    return x;
+}
