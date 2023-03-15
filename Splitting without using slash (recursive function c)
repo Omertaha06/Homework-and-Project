@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void f(int a,int b,int c){
+ if(a>=b){
+    a=a-b;
+    c++;
+    f(a,b,c);
+ }
+else if(a<b){
+printf("Bolumun sonucu  %d\n",c);
+}
+}
+
+
+
+int main()
+{
+    int i,a,b;
+    printf("Lutfen bir sayi giriniz");
+    scanf("%d",&a);
+    printf("Girdiginiz sayiyi bolmek istediginiz sayiyi giriniz");
+    scanf("%d",&b);
+    i=0;
+    f(a,b,i);
+
+    return 0;
+}
