@@ -1,0 +1,60 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void f(int i){
+ char y[2]="*",c[2]="|";
+
+
+ if(i==0){
+    printf("%50s\n",y);
+    i++;
+    f(i);
+ }
+ else if(i==1){
+    printf("%49s%s%s\n",y,y,y);
+    i++,f(i);
+ }
+else if(i==2){
+    printf("%48s%s%s%s%s\n",y,y,y,y,y);
+    i++,f(i);
+}
+else if(i==3){
+    printf("%50s\n",y);
+    i++;
+    f(i);
+}
+else if(i==4){
+    printf("%49s%s%s\n",y,y,y);
+    i++,f(i);
+}
+else if(i==5){
+    printf("%48s%s%s%s%s\n",y,y,y,y,y);
+    i++,f(i);
+}
+else if(i==6){
+    printf("%47s%s%s%s%s%s%s\n",y,y,y,y,y,y,y);
+    i++,f(i);
+}
+else if(i==7){
+    printf("%46s%s%s%s%s%s%s%s%s\n",y,y,y,y,y,y,y,y,y);
+    i++,f(i);
+}
+else if(i==8){
+    printf("%50s\n",c);
+    i++,f(i);
+}
+else if(i==9){
+    printf("%50s\n",c);
+    i++,f(i);
+}
+else if(i==10){
+    printf("%50s\n",c);
+    i++;
+}
+}
+int main()
+{
+   int i=0;
+   f(i);
+   return 0;
+}
